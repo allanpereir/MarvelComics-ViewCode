@@ -10,7 +10,6 @@
 		BC340577285B7808007B7725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340576285B7808007B7725 /* AppDelegate.swift */; };
 		BC340579285B7808007B7725 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340578285B7808007B7725 /* SceneDelegate.swift */; };
 		BC34057B285B7808007B7725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34057A285B7808007B7725 /* ViewController.swift */; };
-		BC34057E285B7808007B7725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC34057C285B7808007B7725 /* Main.storyboard */; };
 		BC340580285B780A007B7725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC34057F285B780A007B7725 /* Assets.xcassets */; };
 		BC340583285B780A007B7725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC340581285B780A007B7725 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		BC340576285B7808007B7725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC340578285B7808007B7725 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BC34057A285B7808007B7725 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC34057D285B7808007B7725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC34057F285B780A007B7725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC340582285B780A007B7725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC340584285B780A007B7725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,30 @@
 		BC340575285B7808007B7725 /* MarvelComics-ViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				BC34058C285B79B6007B7725 /* View */,
+				BC34058A285B799C007B7725 /* Model */,
 				BC340576285B7808007B7725 /* AppDelegate.swift */,
 				BC340578285B7808007B7725 /* SceneDelegate.swift */,
 				BC34057A285B7808007B7725 /* ViewController.swift */,
-				BC34057C285B7808007B7725 /* Main.storyboard */,
 				BC34057F285B780A007B7725 /* Assets.xcassets */,
 				BC340581285B780A007B7725 /* LaunchScreen.storyboard */,
 				BC340584285B780A007B7725 /* Info.plist */,
 			);
 			path = "MarvelComics-ViewCode";
+			sourceTree = "<group>";
+		};
+		BC34058A285B799C007B7725 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC34058C285B79B6007B7725 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +140,6 @@
 			files = (
 				BC340583285B780A007B7725 /* LaunchScreen.storyboard in Resources */,
 				BC340580285B780A007B7725 /* Assets.xcassets in Resources */,
-				BC34057E285B7808007B7725 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +159,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BC34057C285B7808007B7725 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC34057D285B7808007B7725 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BC340581285B780A007B7725 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +298,6 @@
 				INFOPLIST_FILE = "MarvelComics-ViewCode/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +325,6 @@
 				INFOPLIST_FILE = "MarvelComics-ViewCode/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
