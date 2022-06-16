@@ -11,7 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    var screen: HomeScreenView?
+    
+    override func loadView() {
+        self.screen = HomeScreenView()
+        self.view = screen
     }
 }
 
