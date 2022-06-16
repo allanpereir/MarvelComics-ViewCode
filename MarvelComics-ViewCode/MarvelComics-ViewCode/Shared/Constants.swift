@@ -8,5 +8,6 @@
 import Foundation
 
 struct Constant {
+    static let CustomTableViewCell = "CustomTableViewCell"
     
 }

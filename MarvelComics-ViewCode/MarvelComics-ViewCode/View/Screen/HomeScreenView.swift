@@ -13,7 +13,8 @@ class HomeScreenView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .blue
+        tableView.backgroundColor = .black
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
         return tableView
     }()
     
@@ -21,6 +22,8 @@ class HomeScreenView: UIView {
         let searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.backgroundColor = .black
+        searchBar.barTintColor = .black
+        searchBar.searchTextField.textColor = .white
         searchBar.placeholder = "Buscar"
         return searchBar
     }()
@@ -29,11 +32,12 @@ class HomeScreenView: UIView {
         super.init(frame: frame)
         self.addSubview(self.searchBar)
         self.addSubview(self.tableView)
-        configContraints()
+        self.configContraints()
     }
     
-    public func setupTableView () {
-        
+    public func setupTableViewProtocols (delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        self.tableView.delegate = delegate
+        self.tableView.dataSource = dataSource
     }
     
     private func configContraints() {
@@ -44,7 +48,7 @@ class HomeScreenView: UIView {
             self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.tableView.topAnchor.constraint(equalTo: searchBar.topAnchor, constant: 50),
+            self.tableView.topAnchor.constraint(equalTo: self.searchBar.topAnchor, constant: 50),
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
