@@ -1,7 +1,6 @@
 # MarvelComics-ViewCode - iOS
 O MarvelComics-ViewCode é um app para listar todos os personagens da Marvel, sendo implementado em Swift utilizando View Code com arquitetura MVVM.
 
-<img src="https://user-images.githubusercontent.com/58039168/173194975-070062df-cfa0-46cb-a2f5-e1c6caef9060.png" alt="drawing" width="150"/> <img 
 
 # Funcionalidades
 
