@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		BC340577285B7808007B7725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340576285B7808007B7725 /* AppDelegate.swift */; };
 		BC340579285B7808007B7725 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340578285B7808007B7725 /* SceneDelegate.swift */; };
-		BC34057B285B7808007B7725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34057A285B7808007B7725 /* ViewController.swift */; };
+		BC34057B285B7808007B7725 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34057A285B7808007B7725 /* HomeViewController.swift */; };
 		BC340580285B780A007B7725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC34057F285B780A007B7725 /* Assets.xcassets */; };
 		BC340583285B780A007B7725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC340581285B780A007B7725 /* LaunchScreen.storyboard */; };
-		BC340590285B7BA4007B7725 /* CustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34058F285B7BA4007B7725 /* CustomCellViewModel.swift */; };
+		BC340590285B7BA4007B7725 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34058F285B7BA4007B7725 /* CustomTableViewCell.swift */; };
 		BC340593285B7C8C007B7725 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340592285B7C8C007B7725 /* HomeScreenView.swift */; };
 		BC340596285B7F14007B7725 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340595285B7F14007B7725 /* Constants.swift */; };
+		BC340599285B9175007B7725 /* CustomCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340598285B9175007B7725 /* CustomCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC340573285B7808007B7725 /* MarvelComics-ViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MarvelComics-ViewCode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC340576285B7808007B7725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC340578285B7808007B7725 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC34057A285B7808007B7725 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC34057A285B7808007B7725 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC34057F285B780A007B7725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC340582285B780A007B7725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC340584285B780A007B7725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC34058F285B7BA4007B7725 /* CustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellViewModel.swift; sourceTree = "<group>"; };
+		BC34058F285B7BA4007B7725 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		BC340592285B7C8C007B7725 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		BC340595285B7F14007B7725 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BC340598285B9175007B7725 /* CustomCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				BC340591285B7C69007B7725 /* Screen */,
-				BC34057A285B7808007B7725 /* ViewController.swift */,
+				BC34057A285B7808007B7725 /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,6 +94,7 @@
 		BC34058D285B7B5A007B7725 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				BC340597285B9147007B7725 /* Screen */,
 				BC34058E285B7B6A007B7725 /* ViewModel */,
 			);
 			path = Cell;
@@ -100,7 +103,7 @@
 		BC34058E285B7B6A007B7725 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BC34058F285B7BA4007B7725 /* CustomCellViewModel.swift */,
+				BC34058F285B7BA4007B7725 /* CustomTableViewCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -119,6 +122,14 @@
 				BC340595285B7F14007B7725 /* Constants.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		BC340597285B9147007B7725 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				BC340598285B9175007B7725 /* CustomCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC34057B285B7808007B7725 /* ViewController.swift in Sources */,
+				BC34057B285B7808007B7725 /* HomeViewController.swift in Sources */,
 				BC340577285B7808007B7725 /* AppDelegate.swift in Sources */,
 				BC340593285B7C8C007B7725 /* HomeScreenView.swift in Sources */,
 				BC340579285B7808007B7725 /* SceneDelegate.swift in Sources */,
-				BC340590285B7BA4007B7725 /* CustomCellViewModel.swift in Sources */,
+				BC340590285B7BA4007B7725 /* CustomTableViewCell.swift in Sources */,
+				BC340599285B9175007B7725 /* CustomCellScreen.swift in Sources */,
 				BC340596285B7F14007B7725 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
