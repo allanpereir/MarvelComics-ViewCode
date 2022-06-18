@@ -10,7 +10,7 @@ O MarvelComics-ViewCode é um app para listar todos os personagens da Marvel, im
 - Integração com API https://developer.marvel.com
 - Uso de TableView
 - Cocoapod SDWebImage para imagens
-- Cocoapod AlamoFire para API
+- Cocoapod AlamoFire para consumir API
                                                                                                                                                   
 
 
