@@ -13,6 +13,8 @@ class CustomCellScreen: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .blue
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = imageView.frame.height / 2
         return imageView
     }()
     
@@ -20,7 +22,8 @@ class CustomCellScreen: UIView {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Comic's Name"
-        label.textColor = .red
+        label.numberOfLines = 2
+        label.textColor = .white
         
        return label
     }()
@@ -29,6 +32,8 @@ class CustomCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Comic's Desciption"
+        label.numberOfLines = 10
+        label.font = UIFont.systemFont(ofSize: 12.0)
         label.textColor = .red
         return label
     }()
@@ -37,6 +42,7 @@ class CustomCellScreen: UIView {
         super.init(frame: frame)
         self.addSubViews()
         self.configContraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -50,12 +56,11 @@ class CustomCellScreen: UIView {
     }
     
     private func configContraints() {
-        
         NSLayoutConstraint.activate([
             self.imageCharacter.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.imageCharacter.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.imageCharacter.heightAnchor.constraint(equalToConstant: 150),
-            self.imageCharacter.widthAnchor.constraint(equalToConstant: 150),
+            self.imageCharacter.heightAnchor.constraint(equalToConstant: 100),
+            self.imageCharacter.widthAnchor.constraint(equalToConstant: 100),
             self.nameTextLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.nameTextLabel.leadingAnchor.constraint(equalTo: self.imageCharacter.trailingAnchor, constant: 10),
             self.nameTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
