@@ -14,7 +14,7 @@ class HomeScreenView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .black
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: Constant.CustomTableViewCell)
         return tableView
     }()
     
@@ -38,6 +38,10 @@ class HomeScreenView: UIView {
     public func setupTableViewProtocols (delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         self.tableView.delegate = delegate
         self.tableView.dataSource = dataSource
+    }
+    
+    public func setupSearchBarProtocol (delegate: UISearchBarDelegate){
+        self.searchBar.delegate = delegate
     }
     
     private func configContraints() {

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class CustomTableViewCell: UITableViewCell {
     
@@ -16,6 +17,7 @@ class CustomTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.screen.translatesAutoresizingMaskIntoConstraints = false
         self.screen.backgroundColor = .black
+        self.selectionStyle = .none
         self.contentView.addSubview(self.screen)
         self.configContraints()
     }
@@ -31,5 +33,18 @@ class CustomTableViewCell: UITableViewCell {
             self.screen.topAnchor.constraint(equalTo: self.topAnchor),
             self.screen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
+    }
+    
+    public func setup(value: Character) {
+        self.screen.nameTextLabel.text = value.name
+        self.screen.descriptionTextLabel.text = value.description
+        let url = extractImage(data: value.thumbnail)
+        self.screen.imageCharacter.sd_setImage(with: url)
+    }
+    
+    public func extractImage(data: [String : String]) -> URL? {
+        let path = data["path"] ?? ""
+        let ext = data ["extension"] ?? ""
+        return URL(string: "\(path).\(ext)")!
     }
 }
